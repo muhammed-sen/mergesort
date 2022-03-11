@@ -10,13 +10,14 @@ namespace MergeSort
         {
             List<int> unsorted = new List<int>(); 
             List<int> sorted;
-            int[] arrayUnsorted = new int[10];
-            int[] arraySorted = new int[10];
-
+            
             Random random = new Random();
+            var sizeOfArray = random.Next(10, 100);
+            int[] arrayUnsorted = new int[sizeOfArray];
+            int[] arraySorted = new int[sizeOfArray];
 
             Console.WriteLine("Original List elements:");
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < sizeOfArray; i++)
             {
                 unsorted.Add(random.Next(0, 100));
                 arrayUnsorted[i] = random.Next(0, 100);
@@ -66,7 +67,7 @@ namespace MergeSort
                 left.Add(unsorted[i]);
             }
             //populate right array
-            //We start our index from the middle, as we have already populated the left array from 0 to midldle
+            //We start our index from the middle, as we have already populated the left array from 0 to middle
             for (int i = middle; i < unsorted.Count; i++)
             {
                 right.Add(unsorted[i]);
