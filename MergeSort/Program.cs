@@ -8,7 +8,7 @@ namespace MergeSort
     {
         static void Main(string[] args)
         {
-            List<int> unsorted = new List<int>();
+            List<int> unsorted = new List<int>(); 
             List<int> sorted;
             int[] arrayUnsorted = new int[10];
             int[] arraySorted = new int[10];
